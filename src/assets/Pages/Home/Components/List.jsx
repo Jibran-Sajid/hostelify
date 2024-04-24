@@ -8,7 +8,7 @@ const products = [
     reviewCount: 38,
     imageSrc: 'https://images.unsplash.com/photo-1533106497176-45ae19e68ba2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGhvc3RlbHN8ZW58MHx8MHx8fDA%3D',
     imageAlt: 'TODO',
-    href: '/product/details/',
+    href: '/room-details/',
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const products = [
     reviewCount: 18,
     imageSrc: 'https://images.unsplash.com/photo-1633411187642-f84216917af1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8aG9zdGVsc3xlbnwwfHwwfHx8MA%3D%3D',
     imageAlt: 'TODO',
-    href: '/product/details/',
+    href: '/room-details/',
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ const products = [
     reviewCount: 14,
     imageSrc: 'https://images.unsplash.com/photo-1527853787696-f7be74f2e39a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aG9zdGVsc3xlbnwwfHwwfHx8MA%3D%3D',
     imageAlt: 'TODO',
-    href: '/product/details/',
+    href: '/room-details/',
   },
   {
     id: 4,
@@ -35,7 +35,7 @@ const products = [
     reviewCount: 21,
     imageSrc: 'https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG9zdGVsc3xlbnwwfHwwfHx8MA%3D%3D',
     imageAlt: 'TODO',
-    href: '/product/details/',
+    href: '/room-details/',
   },
   {
     id: 5,
@@ -44,7 +44,7 @@ const products = [
     reviewCount: 14,
     imageSrc: 'https://images.unsplash.com/photo-1527853787696-f7be74f2e39a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aG9zdGVsc3xlbnwwfHwwfHx8MA%3D%3D',
     imageAlt: 'TODO',
-    href: '/product/details/',
+    href: '/room-details/',
   },
   {
     id: 6,
@@ -53,7 +53,7 @@ const products = [
     reviewCount: 21,
     imageSrc: 'https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG9zdGVsc3xlbnwwfHwwfHx8MA%3D%3D',
     imageAlt: 'TODO',
-    href: '/product/details/',
+    href: '/room-details/',
   },
   // More products...
 ]
