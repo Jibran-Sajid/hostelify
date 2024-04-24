@@ -18,7 +18,7 @@ function App() {
     
     <Routes>
       <Route exact path="/" element={<Home />} />
-      <Route exact path="/room-details/" element={<ProductDetails />} />
+      <Route exact path="/room-details" element={<ProductDetails />} />
       <Route exact path="*" element={<Error errorCode={404} message="Opps! Page Not Found" />} />
     </Routes>
 
