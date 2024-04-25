@@ -4,7 +4,7 @@ import Navbar from './assets/SharedComponents/Navbar';
 import { SlideOver } from './assets/SharedComponents/Navbar';
 import Home from './assets/Pages/Home/Home';
 import Footer from './assets/SharedComponents/Footer';
-import RoomDetails from './assets/Pages/Room/RoomDetails';
+import RoomDetails from './assets/Pages/Room/RoomDeatails/RoomDetails';
 import Error from './assets/Pages/Errors/Error';
 
 function App() {
