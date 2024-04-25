@@ -4,7 +4,7 @@ import Navbar from './assets/SharedComponents/Navbar';
 import { SlideOver } from './assets/SharedComponents/Navbar';
 import Home from './assets/Pages/Home/Home';
 import Footer from './assets/SharedComponents/Footer';
-import ProductDetails from './assets/Pages/ProductDetails/ProductDetails';
+import RoomDetails from './assets/Pages/Room/RoomDetails';
 import Error from './assets/Pages/Errors/Error';
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
     
     <Routes>
       <Route exact path="/" element={<Home />} />
-      <Route exact path="/room-details" element={<ProductDetails />} />
+      <Route exact path="/room-details" element={<RoomDetails />} />
       <Route exact path="*" element={<Error errorCode={404} message="Opps! Page Not Found" />} />
     </Routes>
 

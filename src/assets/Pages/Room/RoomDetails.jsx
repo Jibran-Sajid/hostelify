@@ -5,7 +5,7 @@ import { HeartIcon, MinusIcon, PlusIcon } from '@heroicons/react/24/outline'
 
 const product = {
   name: 'Zip Tote Basket',
-  price: '$140',
+  price: 2400,
   rating: 4,
   images: [
     {
@@ -57,6 +57,12 @@ const product = {
     },
     // More sections...
   ],
+  roommates: [
+    { name: 1, inStock: true },
+    { name: 2, inStock: true },
+    { name: 3, inStock: false },
+    { name: 4, inStock: true },
+  ]
 }
 
 function classNames(...classes) {
@@ -64,7 +70,13 @@ function classNames(...classes) {
 }
 
 export default function ProductDeatils() {
-  const [selectedColor, setSelectedColor] = useState(product.colors[0])
+  const [selectedMates, setSelectedMates] = useState(product.roommates[0])
+  let [roomPrice, setRoomPrice] = useState(product.price);
+
+  let priceHandler = (prop) => {
+    let temp = product.price / prop;
+    setRoomPrice(temp)
+  }
 
   return (
     <div className="bg-white">
@@ -119,7 +131,7 @@ export default function ProductDeatils() {
 
             <div className="mt-3">
               <h2 className="sr-only">Product information</h2>
-              <p className="text-3xl tracking-tight text-gray-900">{product.price}</p>
+              <p className="text-3xl tracking-tight text-gray-900">Rs. {roomPrice}</p>
             </div>
 
             {/* Reviews */}
@@ -149,6 +161,39 @@ export default function ProductDeatils() {
                 className="space-y-6 text-base text-gray-700"
                 dangerouslySetInnerHTML={{ __html: product.description }}
               />
+            </div>
+
+            {/* Num of roommates picker */}
+            <div className="mt-8">
+              <div className="flex items-center justify-between">
+                <h2 className="text-sm font-medium text-gray-900">Numbers of roommates</h2>
+              </div>
+
+              <RadioGroup value={selectedMates} onChange={setSelectedMates} className="mt-2">
+                <RadioGroup.Label className="sr-only">Choose a size</RadioGroup.Label>
+                <div className="grid grid-cols-3 gap-3 sm:grid-cols-6">
+                  {product.roommates.map((mate) => (
+                    <RadioGroup.Option
+                      onClick={()=>{priceHandler(mate.name)}}
+                      key={mate.name}
+                      value={mate}
+                      className={({ active, checked }) =>
+                        classNames(
+                          mate.inStock ? 'cursor-pointer focus:outline-none' : 'cursor-not-allowed opacity-25',
+                          active ? 'ring-2 ring-indigo-500 ring-offset-2' : '',
+                          checked
+                            ? 'border-transparent bg-indigo-600 text-white hover:bg-indigo-700'
+                            : 'border-gray-200 bg-white text-gray-900 hover:bg-gray-50',
+                          'flex items-center justify-center rounded-md border py-3 px-3 text-sm font-medium uppercase sm:flex-1'
+                        )
+                      }
+                      disabled={!mate.inStock}
+                    >
+                      <RadioGroup.Label as="span">1/{mate.name}</RadioGroup.Label>
+                    </RadioGroup.Option>
+                  ))}
+                </div>
+              </RadioGroup>
             </div>
 
             <form className="mt-6">
